@@ -29,32 +29,20 @@
                     <span class="sub-title">Trusted Investment</span>
                     <h2>Updates, Regulations, & Your Investment Journey</h2>
                     <div class="btn-box">
-                        <a href="index.html" class="theme-btn"><span>Get Started</span></a>
-                        <a href="{{ asset('assets/images/resource/vector-1.png') }}" class="lightbox-image video-btn"
-                            data-caption=""><i class="icon-3"></i></a>
+                        @if (auth()->user())
+                            <a href="{{ route('User.Dashboard') }}" class="theme-btn"><span>Dashboard</span></a>
+                            <a href="{{ asset('assets/images/resource/vector-1.png') }}" class="lightbox-image video-btn"
+                                data-caption=""><i class="icon-3"></i></a>
+                        @else
+                            <a href="{{ route('register') }}" class="theme-btn"><span>Plans</span></a>
+                            <a href="{{ asset('assets/images/resource/vector-1.png') }}" class="lightbox-image video-btn"
+                                data-caption=""><i class="icon-3"></i></a>
+                        @endif
                     </div>
                 </div>
                 <figure class="image-box float-bob-y"><img src="{{ asset('assets/images/resource/vector-1.png') }}"
                         alt="">
                 </figure>
-            </div>
-        </div>
-    </section>
-    <section class="clients-section">
-        <div class="outer-container">
-            <div class="inner-container">
-                <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                    <figure class="clients-box"><a href="index.html"><img
-                                src="{{ asset('assets/images/clients/clients-1.png') }}" alt=""></a></figure>
-                    <figure class="clients-box"><a href="index.html"><img
-                                src="{{ asset('assets/images/clients/clients.png') }}" alt=""></a></figure>
-                    <figure class="clients-box"><a href="index.html"><img
-                                src="{{ asset('assets/images/clients/clients-3.png') }}" alt=""></a></figure>
-                    <figure class="clients-box"><a href="index.html"><img
-                                src="{{ asset('assets/images/clients/clients-4.png') }}" alt=""></a></figure>
-                    <figure class="clients-box"><a href="index.html"><img
-                                src="{{ asset('assets/images/clients/clients-5.png') }}" alt=""></a></figure>
-                </div>
             </div>
         </div>
     </section>
@@ -116,8 +104,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 service-block">
                     <div class="service-block-one">
                         <div class="inner-box">
-                            <div class="icon-box"><img src="{{ asset('assets/images/icons/icon-1.svg') }}"
-                                    alt=""></div>
+                            <div class="icon-box"><img src="{{ asset('assets/images/icons/icon-1.svg') }}" alt="">
+                            </div>
                             <div class="light-icon"><img src="{{ asset('assets/images/icons/icon-1.png') }}"
                                     alt=""></div>
                             <h3><a href="service-details.html">Investment Plans</a></h3>
@@ -133,7 +121,8 @@
                             <div class="icon-box"><img src="{{ asset('assets/images/icons/icon.svg') }}" alt="">
                             </div>
                             <div class="light-icon"><img src="{{ asset('assets/images/icons/icon.png') }}"
-                                    alt=""></div>
+                                    alt="">
+                            </div>
                             <h3><a href="service-details.html">Portfolio Management</a></h3>
                             <p>Provide professional portfolio was in services, where investors' funds.</p>
                             <div class="link"><a href="service-details.html">View Details <i class="icon-4"></i></a>

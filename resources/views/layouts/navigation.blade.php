@@ -34,10 +34,9 @@
 
 </head>
 
-
-<!-- Boxed Wrapper -->
-
 <body>
+
+    <x-alert />
 
     <div class="boxed_wrapper">
 
@@ -76,38 +75,9 @@
                             <div class="collapse navbar-collapse show" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="current"><a href="index.html">Home</a></li>
-                                    <li class=""><a href="dashboard.html">Dashboard</a>
-                                        <!-- <ul>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="team.html">Our Team</a></li>
-                                            <li><a href="signup.html">Sign Up</a></li>
-                                            <li><a href="signin.html">Sign In</a></li>
-                                            <li><a href="forget-password.html">Forget Password</a></li>
-                                            <li><a href="dashboard.html">Dashboard One</a></li>
-                                            <li><a href="dashboard.html">Dashboard Two</a></li>
-                                            <li><a href="referral-link.html">Referral Link</a></li>
-                                            <li><a href="pricing.html">Pricing Plan</a></li>
-                                            <li><a href="profile.html">Profile Details</a></li>
-                                            <li><a href="change-password.html">Change Password</a></li>
-                                        </ul> -->
-                                    </li>
                                     <li class=""><a href="service-details.html">Plans</a>
-                                        <!-- <ul>
-                                            <li><a href="service.html">Our Services</a></li>
-                                            <li><a href="service-details.html">Investment Plans</a></li>
-                                            <li><a href="service-details.html">Portfolio Management</a></li>
-                                            <li><a href="service-details-3.html">Risk Analysis</a></li>
-                                            <li><a href="service-details-4.html">Security Features</a></li>
-                                            <li><a href="service-details-5.html">Withdrawal Services</a></li>
-                                            <li><a href="service-details-6.html">Referral Programs</a></li>
-                                        </ul> -->
                                     </li>
                                     <li><a href="service.html">About Us</a>
-                                        <!-- <ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul> -->
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li class="dropdown"><a href="#">Auth</a>
@@ -120,7 +90,11 @@
                             </div>
                         </nav>
                     </div>
-                    <div class="btn-box"><a href="{{ route('register') }}">Get Started</a></div>
+                    @if (auth()->user())
+                        <div class="btn-box"><a href="{{ route('User.Dashboard') }}">Dashboard</a></div>
+                    @else
+                        <div class="btn-box"><a href="{{ route('register') }}">Get Started</a></div>
+                    @endif
                 </div>
             </div>
 
@@ -137,7 +111,11 @@
                                 <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                         </div>
-                        <div class="btn-box"><a href="{{ route('register') }}">Get Started</a></div>
+                        @if (auth()->user())
+                            <div class="btn-box"><a href="{{ route('User.Dashboard') }}">Dashboard</a></div>
+                        @else
+                            <div class="btn-box"><a href="{{ route('register') }}">Get Started</a></div>
+                        @endif
                     </div>
                 </div>
             </div>
