@@ -76,9 +76,15 @@
                                             Password</a>
                                     </li>
                                     <li>
-                                        <form action="{{ route('logout') }}" method="POST">
+                                        {{-- adding logout button with icon --}}
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <img src="{{ asset('assets/images/icons/icon-30.svg') }}"
+                                                alt="">Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
                                             @csrf
-                                            <button type="submit" class="btn btn-danger">Logout</button>
                                         </form>
                                     </li>
                                 </ul>
