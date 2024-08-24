@@ -80,12 +80,30 @@
                                     <li><a href="service.html">About Us</a>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li class="dropdown"><a href="#">Auth</a>
-                                        <ul>
-                                            <li><a href="{{ route('login') }}">Sign In</a></li>
-                                            <li><a href="{{ route('register') }}">Sign Up</a></li>
-                                        </ul>
-                                    </li>
+                                    @if (auth()->user())
+                                        <li class="dropdown"><a href="#">Auth</a>
+                                            <ul>
+                                                {{-- adding logout button with icon --}}
+                                                <li><a href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                                        <i class="fa fa-sign-out"></i>
+                                                        Logout</a>
+                                                    <form id="logout-form" action="{{ route('logout') }}"
+                                                        method="POST" style="display: none;">
+                                                        @csrf
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li class="dropdown"><a href="#">Auth</a>
+                                            <ul>
+                                                <li><a href="{{ route('login') }}">Sign In</a></li>
+                                                <li><a href="{{ route('register') }}">Sign Up</a></li>
+                                            </ul>
+                                        </li>
+                                    @endif
                                 </ul>
                             </div>
                         </nav>

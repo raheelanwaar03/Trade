@@ -8,6 +8,12 @@ class WelcomeController extends Controller
 {
     public function welcome()
     {
-        return view('welcome');
+        return view('home.welcome');
     }
+
+    public function plans()
+    {
+        return view('home.plans');
+    }
+
 }

@@ -34,7 +34,7 @@
                             <a href="{{ asset('assets/images/resource/vector-1.png') }}" class="lightbox-image video-btn"
                                 data-caption=""><i class="icon-3"></i></a>
                         @else
-                            <a href="{{ route('register') }}" class="theme-btn"><span>Plans</span></a>
+                            <a href="{{ route('Plans') }}" class="theme-btn"><span>Plans</span></a>
                             <a href="{{ asset('assets/images/resource/vector-1.png') }}" class="lightbox-image video-btn"
                                 data-caption=""><i class="icon-3"></i></a>
                         @endif
