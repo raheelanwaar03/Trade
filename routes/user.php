@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\DepositController;
+use App\Http\Controllers\user\DepositController;
 use App\Http\Controllers\user\UserDashboard;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 

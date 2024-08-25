@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\PaymentMethod;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -56,5 +57,18 @@ class clean extends Command
         $user->user_id = 'SRM12345';
         $user->save();
 
+        // adding payment method
+
+        $account = new PaymentMethod();
+        $account->user_name = 'Test';
+        $account->bank_name = 'Easypaisa';
+        $account->account_num = '03121122333';
+        $account->save();
+
+        $account = new PaymentMethod();
+        $account->user_name = 'Test';
+        $account->bank_name = 'Jazzcash';
+        $account->account_num = '03121122555';
+        $account->save();
     }
 }
