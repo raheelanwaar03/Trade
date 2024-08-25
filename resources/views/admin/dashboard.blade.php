@@ -163,3 +163,8 @@
         </div>
     </section>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('assets/js/data-table.js') }}"></script>
+    <script src="{{ asset('assets/js/datatable.js') }}"></script>
+@endsection

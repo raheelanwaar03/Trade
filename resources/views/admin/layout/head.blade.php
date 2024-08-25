@@ -14,40 +14,18 @@
 
     <!-- Stylesheets List -->
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/owl.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/font-awesome-all.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/nice-select.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/odometer.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/data-table.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
-
 </head>
-
-
-<!-- Boxed Wrapper -->
 
 <body>
 
+    <x-alert />
+
     <div class="boxed_wrapper">
-
-
-        <!-- Preloader -->
-        <div class="loader-wrap">
-            <div class="preloader">
-                <div id="handle-preloader" class="handle-preloader">
-                    <div class="animation-preloader">
-                        <div class="spinner"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Preloader End -->
-
-
         <!-- Dashboard Header -->
         <header class="dashboard-header">
             <div class="outer-container">
@@ -106,9 +84,9 @@
                             style="color: white;margin-left:12px;">{{ env('APP_NAME') }}</span></a>
                 </figure>
                 <ul class="dashboard-category-list">
-                    <li><a href="index.html" class="current"><img src="{{ asset('assets/images/icons/icon-31.svg') }}"
-                                alt="">Dashboard</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-32.svg') }}"
+                    <li><a href="{{ route('Admin.Dashboard') }}" class="current"><img
+                                src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
+                    <li><a href="{{route('Admin.All.Deposit.Requests')}}"><img src="{{ asset('assets/images/icons/icon-32.svg') }}"
                                 alt="">Deposit</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
                                 alt="">Buy Package</a>
