@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Trades Sphere - We welcome our investors with huge love</title>
+    <title>Admin Dashbaord</title>
     <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap" rel="stylesheet">
     <link
@@ -106,10 +106,10 @@
                             style="color: white;margin-left:12px;">{{ env('APP_NAME') }}</span></a>
                 </figure>
                 <ul class="dashboard-category-list">
-                    <li><a href="{{ route('User.Dashboard') }}" class="current"><img
-                                src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
-                    <li><a href="{{ route('User.Deposit') }}"><img
-                                src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
+                    <li><a href="index.html" class="current"><img src="{{ asset('assets/images/icons/icon-31.svg') }}"
+                                alt="">Dashboard</a></li>
+                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-32.svg') }}"
+                                alt="">Deposit</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
                                 alt="">Buy Package</a>
                     </li>
