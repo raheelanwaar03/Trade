@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('tid');
             $table->string('img');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

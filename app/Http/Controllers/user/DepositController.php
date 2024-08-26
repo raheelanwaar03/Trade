@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentMethod;
 use App\Models\user\Deposit;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
 
 class DepositController extends Controller
@@ -38,6 +39,7 @@ class DepositController extends Controller
         $deposit->title = $request->title;
         $deposit->tid = $request->tid;
         $deposit->img = $img_name;
+        $deposit->status = 'pending';
         $deposit->save();
 
         return redirect()->route('User.Dashboard')->with('success', 'Submitted successfully! Wait for Admin Approval');

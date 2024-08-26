@@ -87,7 +87,7 @@
                 <ul class="dashboard-category-list">
                     <li><a href="{{ route('Admin.Dashboard') }}" class="current"><img
                                 src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
-                    <li><a href="{{route('Admin.All.Deposit.Requests')}}"><img src="{{ asset('assets/images/icons/icon-32.svg') }}"
+                    <li><a href="{{route('Admin.Pending.Deposit.Requests')}}"><img src="{{ asset('assets/images/icons/icon-32.svg') }}"
                                 alt="">Deposit</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
                                 alt="">Buy Package</a>

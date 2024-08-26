@@ -9,20 +9,41 @@ use Illuminate\Http\Request;
 
 class AdminDepositController extends Controller
 {
-    public function all()
+    public function pendingDeposit()
     {
-        $deposits = Deposit::get();
+        $deposits = Deposit::where('status', 'pending')->get();
         return view('admin.deposit.all', compact('deposits'));
+    }
+
+    public function approvedDeposit()
+    {
+        $deposits = Deposit::where('status', 'approved')->get();
+        return view('admin.deposit.approved', compact('deposits'));
+    }
+
+    public function rejectedDeposit()
+    {
+        $deposits = Deposit::where('status', 'rejected')->get();
+        return view('admin.deposit.rejected', compact('deposits'));
     }
 
     public function approveDeposit($id)
     {
-        return $id;
+        $deposit = Deposit::find($id);
+        $deposit->status = 'approved';
+        $deposit->save();
+        $user = User::find($deposit->user_id);
+        $user->balance += $deposit->amount;
+        $user->save();
+        return redirect(route('Admin.Pending.Deposit.Requests'))->with('success', 'User Deposit request Approved');
     }
 
     public function rejectDeposit($id)
     {
-        return $id;
+        $deposit = Deposit::find($id);
+        $deposit->status = 'rejected';
+        $deposit->save();
+        return redirect(route('Admin.Pending.Deposit.Requests'))->with('success', 'User Deposit request Rejected');
     }
 
     public function editDeposit($id)
@@ -36,6 +57,6 @@ class AdminDepositController extends Controller
         $deposit = Deposit::find($id);
         $deposit->amount = $request->amount;
         $deposit->save();
-        return redirect()->route('Admin.All.Deposit.Requests')->with('success', 'User deposit request approved successfull!');
+        return redirect()->back()->with('success', 'User deposit request approved successfull!');
     }
 }

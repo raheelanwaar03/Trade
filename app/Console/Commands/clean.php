@@ -52,6 +52,7 @@ class clean extends Command
         $user->balance = 0.00;
         $user->password = Hash::make('asdfasdf');
         $user->referral = 'default';
+        $user->referral = 'default';
         $user->status = 'approved';
         $user->role = 'user';
         $user->user_id = 'SRM12345';

@@ -31,7 +31,11 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 column">
                             <div class="card single-item">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center" style="color:yellow">Enter Amount To Deposit</h5>
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <h5 class="card-title text-center" style="color:yellow">Enter Amount To Deposit</h5>
+                                        <a href="{{ route('Admin.Approve.Deposit', $deposit->id) }}"
+                                            class="btn btn-success">Approve</a>
+                                    </div>
                                     <form action="{{ route('Admin.Update.Deposit', $deposit->id) }}" method="POST">
                                         @csrf
                                         <div class="form-group">

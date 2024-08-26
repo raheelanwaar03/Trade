@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box">Pending Deposit Requests</div>
+                    <div class="title-box">Rejected Deposit Requests</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
@@ -55,7 +55,7 @@
                                                 width="20px">
                                             {{ date('d-m-Y', strtotime($item->created_at)) }}
                                         </td>
-                                        <td><span class="status-text complete">{{ $item->status }}</span></td>
+                                        <td><span class="bg-danger" style="border-radius: 15px;padding:8px;">{{ $item->status }}</span></td>
                                         <td>
                                             <a href="{{ route('Admin.Edit.Deposit', $item->id) }}"
                                                 class="btn btn-sm btn-warning text-white">Edit</a>

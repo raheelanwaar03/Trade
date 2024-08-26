@@ -8,7 +8,8 @@
                     <div class="row clearfix">
                         <div class="col-lg-12 col-md-12 col-sm-12 column">
                             <div class="d-flex justify-content-around align-items-center single-item">
-                                <a href="{{ route('Admin.Pending.Deposit.Requests') }}" class="btn btn-warning text-white">Pending</a>
+                                <a href="{{ route('Admin.Pending.Deposit.Requests') }}"
+                                    class="btn btn-warning text-white">Pending</a>
                                 <a href="{{ route('Admin.Approved.Deposit.Requests') }}" class="btn btn-success">Approved</a>
                                 <a href="{{ route('Admin.Rejected.Deposit.Requests') }}" class="btn btn-danger">Rejected</a>
                             </div>
@@ -16,7 +17,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box">Pending Deposit Requests</div>
+                    <div class="title-box">Approved Deposit Requests</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
