@@ -11,7 +11,7 @@
                                 <div class="icon-box"><img src="{{ asset('assets/images/team/users.png') }}" alt="users">
                                 </div>
                                 <span>All User</span>
-                                <h2>567</h2>
+                                <h2>{{ users() }}</h2>
                             </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 column">

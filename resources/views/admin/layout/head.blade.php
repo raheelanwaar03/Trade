@@ -17,8 +17,9 @@
     <link href="{{ asset('assets/css/font-awesome-all.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/data-table.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/admin-style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+    @yield('links')
 </head>
 
 <body>
