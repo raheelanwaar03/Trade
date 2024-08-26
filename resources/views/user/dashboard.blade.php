@@ -11,7 +11,7 @@
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/wallet.png') }}" alt="">
                                 </div>
                                 <span>Wallet</span>
-                                <h2>567</h2>
+                                <h2>{{ auth()->user()->balance }}</h2>
                             </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 column">

@@ -44,9 +44,12 @@
                                             {{ date('d-m-Y', strtotime($item->created_at)) }}
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-sm btn-warning text-white">Edit</a>
-                                            <a href="#" class="btn btn-sm btn-success">Approve</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Reject</a>
+                                            <a href="{{ route('Admin.Edit.Deposit', $item->id) }}"
+                                                class="btn btn-sm btn-warning text-white">Edit</a>
+                                            <a href="{{ route('Admin.Approve.Deposit', $item->id) }}"
+                                                class="btn btn-sm btn-success">Approve</a>
+                                            <a href="{{ route('Admin.Reject.Deposit', $item->id) }}"
+                                                class="btn btn-sm btn-danger">Reject</a>
                                         </td>
                                     </tr>
                                 @endforeach
