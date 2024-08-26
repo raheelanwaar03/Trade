@@ -7404,6 +7404,7 @@ Version: 1.0.0
   div.dt-container div.dt-info,
   .dt-layout-cell.dt-end {
     /* display: none !important; */
+    color:yellow;
   }
   
   button {

@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box">All Users</div>
+                    <div class="title-box text-center">All Users</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
