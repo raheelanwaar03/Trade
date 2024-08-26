@@ -26,6 +26,18 @@ class DepositController extends Controller
             'tid' => 'required|numeric',
             'img' => 'required',
         ]);
+        // checking the len of account
+        $account_len = $request->account_num;
+        $accountLength = strlen($account_len);
+        if ($accountLength <= 10) {
+            return redirect()->back()->with('error', 'Enter minimum 11 digits account number');
+        }
+        // checking the len of tid
+        $tid_len = $request->tid;
+        $tidLength = strlen($tid_len);
+        if ($tidLength <= 10) {
+            return redirect()->back()->with('error', 'Enter 11 digits Tid');
+        }
 
         // save img in public folder
         $img = $request->img;
