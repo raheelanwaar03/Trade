@@ -34,33 +34,33 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 column">
                             <div class="card single-item">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Deposit Request</h5>
+                                    <h5 class="card-title text-center" style="color:yellow">Deposit Request</h5>
                                     <form action="{{ route('User.Deposit.Request') }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                             <label for="account_num">Account Number</label>
-                                            <input type="number" id="account_num" name="account_num" class="form-control"
+                                            <input type="number" id="account_num" name="account_num" class="form-control bg-transparent text-white"
                                                 required min="11">
                                         </div>
                                         <div class="form-group">
                                             <label for="amount">Amount</label>
-                                            <input type="number" id="amount" name="amount" class="form-control"
+                                            <input type="number" id="amount" name="amount" class="form-control bg-transparent text-white"
                                                 required>
                                         </div>
                                         <div class="form-group">
                                             <label for="title">Account Title</label>
-                                            <input type="text" id="title" name="title" class="form-control"
+                                            <input type="text" id="title" name="title" class="form-control bg-transparent text-white"
                                                 required>
                                         </div>
                                         <div class="form-group">
                                             <label for="tid">TID</label>
-                                            <input type="number" id="tid" name="tid" class="form-control"
+                                            <input type="number" id="tid" name="tid" class="form-control bg-transparent text-white"
                                                 required>
                                         </div>
                                         <div class="form-group">
                                             <label for="img">Payment Screen-Shot</label>
-                                            <input type="file" id="img" name="img" class="form-control"
+                                            <input type="file" id="img" name="img" class="form-control bg-transparent text-white"
                                                 required>
                                         </div>
                                         <div class="mt-3">

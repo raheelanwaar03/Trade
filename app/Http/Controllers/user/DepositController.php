@@ -40,6 +40,6 @@ class DepositController extends Controller
         $deposit->img = $img_name;
         $deposit->save();
 
-        return redirect()->back()->with('success', 'Deposit request sent successfully');
+        return redirect()->route('User.Dashboard')->with('success', 'Submitted successfully! Wait for Admin Approval');
     }
 }
