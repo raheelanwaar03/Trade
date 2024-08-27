@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box">Rejected Deposit Requests</div>
+                    <div class="title-box text-center">Rejected Deposit Requests</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
