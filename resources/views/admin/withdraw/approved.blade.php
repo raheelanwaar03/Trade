@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box text-center">Pending Withdraw Request</div>
+                    <div class="title-box text-center">Approved Withdraw Request</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
@@ -49,7 +49,7 @@
                                                 width="20px">
                                             {{ date('d-m-Y', strtotime($item->created_at)) }}
                                         </td>
-                                        <td><span class="status-text pending">{{ $item->status }}</span></td>
+                                        <td><span class="status-text complete">{{ $item->status }}</span></td>
                                         <td>
                                             <a href="{{ route('Admin.Approve.Withdraw', $item->id) }}"
                                                 class="btn btn-sm btn-success">Approve</a>

@@ -18,4 +18,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::post('Update/Deposit/Amount/{id}', [AdminDepositController::class, 'updateDeposit'])->name('Update.Deposit');
     // withdraw
     Route::get('Pending/Withdraw/Request', [AdminWithdrawController::class, 'index'])->name('Pending.Withdraws');
+    Route::get('Make/Withdraw/Approved', [AdminWithdrawController::class, 'approvedWithdraw'])->name('Approved.Withdraw');
+    Route::get('Make/Withdraw/Rejected', [AdminWithdrawController::class, 'rejectedWithdraw'])->name('Rejected.Withdraw');
+    Route::get('Make/Withdraw/Approve/{id}', [AdminWithdrawController::class, 'approveWithdraw'])->name('Approve.Withdraw');
+    Route::get('Make/Withdraw/Reject/{id}', [AdminWithdrawController::class, 'rejectWithdraw'])->name('Reject.Withdraw');
 });

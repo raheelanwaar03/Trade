@@ -91,6 +91,8 @@
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
                     <li><a href="#"><img src="{{ asset('assets/images/icons/icon-39.svg') }}"
                                 alt="">Deposit Report</a></li>
+                    <li><a href="{{ route('Admin.Pending.Withdraws') }}"><img src="{{ asset('assets/images/icons/icon-35.svg') }}"
+                                alt="">Withdraw</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
                                 alt="">Buy Package</a>
                     </li>
@@ -98,8 +100,6 @@
                                 alt="">Buy Package
                             History</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-35.svg') }}"
-                                alt="">Withdraw</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-36.svg') }}"
                                 alt="">My Direct</a>
                     </li>

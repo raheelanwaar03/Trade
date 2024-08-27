@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box text-center">Pending Withdraw Request</div>
+                    <div class="title-box text-center">Rejected Withdraw Request</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
