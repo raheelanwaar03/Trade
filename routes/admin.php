@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboard;
 use App\Http\Controllers\admin\AdminDepositController;
+use App\Http\Controllers\admin\AdminWithdrawController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,4 +16,6 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Make/Deposit/Rejected/{id}', [AdminDepositController::class, 'rejectDeposit'])->name('Reject.Deposit');
     Route::get('Edit/Deposit/{id}', [AdminDepositController::class, 'editDeposit'])->name('Edit.Deposit');
     Route::post('Update/Deposit/Amount/{id}', [AdminDepositController::class, 'updateDeposit'])->name('Update.Deposit');
+    // withdraw
+    Route::get('Pending/Withdraw/Request', [AdminWithdrawController::class, 'index'])->name('Pending.Withdraws');
 });

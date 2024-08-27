@@ -96,8 +96,8 @@
                                 alt="">Buy Package
                             History</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-35.svg') }}"
-                                alt="">Withdraw</a></li>
+                    <li><a href="{{ route('User.Apply.Withdraw') }}"><img
+                                src="{{ asset('assets/images/icons/icon-35.svg') }}" alt="">Withdraw</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-36.svg') }}"
                                 alt="">My Direct</a>
                     </li>
