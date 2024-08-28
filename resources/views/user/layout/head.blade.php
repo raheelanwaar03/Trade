@@ -89,8 +89,8 @@
                                 src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
                     <li><a href="{{ route('User.Deposit') }}"><img
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
-                                alt="">Buy Package</a>
+                    <li><a href="{{ route('User.Buy.Plans') }}"><img
+                                src="{{ asset('assets/images/icons/icon-33.svg') }}" alt="">Buy Plans</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-34.svg') }}"
                                 alt="">Buy Package
