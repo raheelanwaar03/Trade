@@ -18,8 +18,8 @@ return new class extends Migration
             $table->float('balance', 5, 5)->default(0);
             $table->string('status')->default('pending');
             $table->string('role')->default('user');
-            $table->string('referral')->default('default');
-            $table->string('user_id')->nullable();
+            $table->string('referral')->nullable();
+            $table->string('user_id');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

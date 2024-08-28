@@ -11,4 +11,9 @@ class UserDashboard extends Controller
     {
         return view('user.dashboard');
     }
+
+    public function refer()
+    {
+        return view('user.refer.copy');
+    }
 }

@@ -39,6 +39,9 @@
                         <input type="password" id="password2" name="password_confirmation" placeholder="Confirm Password"
                             required>
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="referral" value="{{ $referral }}">
+                    </div>
                     <p>By signing up, you confirm that you’ve read and accepted our Privacy Policy.</p>
                     <div class="btn-box">
                         <button type="submit" class="theme-btn">Register</button>

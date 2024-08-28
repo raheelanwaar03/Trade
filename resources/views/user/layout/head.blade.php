@@ -90,8 +90,8 @@
                                 src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
                     <li><a href="{{ route('User.Deposit') }}"><img
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
-                    <li><a href="{{ route('User.Plans') }}"><img
-                                src="{{ asset('assets/images/icons/icon-33.svg') }}" alt="">Buy Plans</a>
+                    <li><a href="{{ route('User.Plans') }}"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
+                                alt="">Buy Plans</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-34.svg') }}"
                                 alt="">Buy Package
@@ -99,8 +99,8 @@
                     </li>
                     <li><a href="{{ route('User.Apply.Withdraw') }}"><img
                                 src="{{ asset('assets/images/icons/icon-35.svg') }}" alt="">Withdraw</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-36.svg') }}"
-                                alt="">My Direct</a>
+                    <li><a href="{{ route('User.Refer.New.User') }}"><img
+                                src="{{ asset('assets/images/icons/icon-36.svg') }}" alt="">Refer Member</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-37.svg') }}"
                                 alt="">Level Report</a>
