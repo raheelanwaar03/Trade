@@ -297,16 +297,17 @@
                 <h2>Choose Your Best <br>Plan For Investing</h2>
             </div>
             <div class="row clearfix">
+                @forelse ($plans as $item)
                 <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
                     <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
                         data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <span class="upper-text">Solar Panels</span>
-                            <h2>1000 PKR</h2>
-                            <a href="index.html" class="theme-btn">Get It Now</a>
+                            <span class="upper-text">{{ $item->name }}</span>
+                            <h2>{{ $item->min }}</h2>
+                            <a href="#" class="theme-btn">Get It Now</a>
                             <ul class="list-item clearfix">
                                 <li>1 business account</li>
-                                <li>30 Days Long</li>
+                                <li>Lifetime</li>
                             </ul>
                             <span class="key-text">Key Features :</span>
                             <ul class="feature-list clearfix">
@@ -317,46 +318,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <span class="upper-text">Bitcoin Mining</span>
-                            <h2>2000 PKR</h2>
-                            <a href="index.html" class="theme-btn">Get It Now</a>
-                            <ul class="list-item clearfix">
-                                <li>5 business account</li>
-                                <li>60 Days Long</li>
-                            </ul>
-                            <span class="key-text">Key Features :</span>
-                            <ul class="feature-list clearfix">
-                                <li>Intermediate Higher Returns</li>
-                                <li>Expected Return 8% to 10$</li>
-                                <li>Priority Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="600ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <span class="upper-text">REAL STATE</span>
-                            <h2>3000 PKR</h2>
-                            <a href="index.html" class="theme-btn">Get It Now</a>
-                            <ul class="list-item clearfix">
-                                <li>10 business account</li>
-                                <li>90 Days Long</li>
-                            </ul>
-                            <span class="key-text">Key Features :</span>
-                            <ul class="feature-list clearfix">
-                                <li>Advanced Higher Returns</li>
-                                <li>Expected Return 12% to 15$</li>
-                                <li>Premium Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                    <h3 class="text-center text-white">Empty</h3>
+                @endforelse
             </div>
         </div>
     </section>
