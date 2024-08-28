@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\admin\Plans;
 use App\Models\PaymentMethod;
 use App\Models\User;
 use Illuminate\Console\Command;
@@ -71,5 +72,21 @@ class clean extends Command
         $account->bank_name = 'Jazzcash';
         $account->account_num = '03121122555';
         $account->save();
+
+        // adding plans
+        $plan = new Plans();
+        $plan->name = 'Real-State';
+        $plan->min = '1500';
+        $plan->save();
+
+        $plan = new Plans();
+        $plan->name = 'Bitcoin Mining';
+        $plan->min = '1500';
+        $plan->save();
+
+        $plan = new Plans();
+        $plan->name = 'Solar Energy';
+        $plan->min = '1500';
+        $plan->save();
     }
 }
