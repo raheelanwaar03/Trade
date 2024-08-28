@@ -43,49 +43,49 @@
     <div class="boxed_wrapper">
         <header class="dashboard-header">
             <div class="outer-container">
-                <figure class="logo-box"><a href="index-2.html"><img src="{{ asset('assets/images/logo.png') }}"
-                            alt=""></a></figure>
+                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
+                            src="{{ asset('assets/images/logo.png') }}" alt=""><span
+                            style="color: white;margin-right:14px;">{{ env('APP_NAME') }}</span></a>
+                </figure>
                 <div class="header-content">
                     <div class="left-content">
                         <div class="menu-text mobile-nav-toggler"><img
-                                src="{{ asset('assets/images/icons/icon-23.svg') }}" alt="">Dashboard</div>
-                        <div class="search-box">
-                            <form method="post" action="#">
-                                <div class="form-group">
-                                    <div class="icon-box"><img src="{{ asset('assets/images/icons/icon-25.svg') }}"
-                                            alt=""></div>
-                                    <input type="search" name="search-field" placeholder="Search Here" required>
-                                    <button type="submit"><img src="{{ asset('assets/images/icons/icon-24.svg') }}"
-                                            alt=""></button>
-                                </div>
-                            </form>
+                                src="{{ asset('assets/images/icons/icon-23.svg') }}" alt="">
+                            <span>Menu</span>
                         </div>
-                    </div>
-                    <div class="right-content">
-                        <div class="notification-box"><button><img src="{{ asset('assets/images/icons/icon-26.svg') }}"
-                                    alt=""><span class="alart"></span></button></div>
-                        <div class="admin-box">
-                            <span>Admin</span>
-                            <figure class="image-box"><img src="{{ asset('assets/images/resource/admin.png') }}"
-                                    alt=""></figure>
-                            <ul class="dropdown-box">
-                                <li><a href="index-2.html"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
-                                            alt="">Profile</a>
-                                </li>
-                                <li><a href="index-2.html"><img src="{{ asset('assets/images/icons/icon-29.svg') }}"
-                                            alt="">Password</a>
-                                </li>
-                                <li><a href="index-2.html"><img src="{{ asset('assets/images/icons/icon-30.svg') }}"
-                                            alt="">Logout</a>
-                                </li>
-                            </ul>
+                        <div class="right-content" style="margin-left: 180px">
+                            <div class="admin-box">
+                                <span>{{ auth()->user()->name }}</span>
+                                <figure class="image-box"><img src="{{ asset('assets/images/resource/admin.png') }}"
+                                        alt="">
+                                </figure>
+                                <ul class="dropdown-box">
+                                    <li><a href="#"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
+                                                alt="">Profile</a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="{{ asset('assets/images/icons/icon-29.svg') }}" alt="">
+                                            Password</a>
+                                    </li>
+                                    <li>
+                                        {{-- adding logout button with icon --}}
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <img src="{{ asset('assets/images/icons/icon-30.svg') }}"
+                                                alt="">Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Dashboard Header End -->
-
 
         <!-- Mobile Menu  -->
         <div class="mobile-menu dashboard-mobile-menu">
