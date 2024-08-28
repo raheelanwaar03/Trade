@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function () {
     Route::get('/Dashboard', [UserDashboard::class, 'index'])->name('Dashboard');
     Route::get('/Refer/Member', [UserDashboard::class, 'refer'])->name('Refer.New.User');
+    Route::get('/My/Team', [UserDashboard::class, 'team'])->name('My.Team');
     // deposit
     Route::get('/Deposit', [DepositController::class, 'deposit'])->name('Deposit');
     Route::post('/Deposit/Request', [DepositController::class, 'request'])->name('Deposit.Request');

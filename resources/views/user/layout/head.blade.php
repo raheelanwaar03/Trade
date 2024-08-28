@@ -102,8 +102,8 @@
                     <li><a href="{{ route('User.Refer.New.User') }}"><img
                                 src="{{ asset('assets/images/icons/icon-36.svg') }}" alt="">Refer Member</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-37.svg') }}"
-                                alt="">Level Report</a>
+                    <li><a href="{{ route('User.My.Team') }}"><img
+                                src="{{ asset('assets/images/icons/icon-37.svg') }}" alt="">My Team</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-38.svg') }}"
                                 alt="">Rank &
