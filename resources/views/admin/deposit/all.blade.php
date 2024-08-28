@@ -55,7 +55,7 @@
                                                 width="20px">
                                             {{ date('d-m-Y', strtotime($item->created_at)) }}
                                         </td>
-                                        <td><span class="status-text complete">{{ $item->status }}</span></td>
+                                        <td><span class="status-text pending">{{ $item->status }}</span></td>
                                         <td>
                                             <a href="{{ route('Admin.Edit.Deposit', $item->id) }}"
                                                 class="btn btn-sm btn-warning text-white">Edit</a>

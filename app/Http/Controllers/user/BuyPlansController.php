@@ -11,6 +11,11 @@ class BuyPlansController extends Controller
     public function plans()
     {
         $plans = Plans::get();
-        return view('user.plan.all',compact('plans'));
+        return view('user.plan.all', compact('plans'));
+    }
+
+    public function buyPlan(Request $request)
+    {
+        return $request;
     }
 }
