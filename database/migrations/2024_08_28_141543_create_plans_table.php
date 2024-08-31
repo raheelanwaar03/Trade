@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('min');
+            $table->string('percentage');
+            $table->string('daily_profit');
             $table->timestamps();
         });
     }

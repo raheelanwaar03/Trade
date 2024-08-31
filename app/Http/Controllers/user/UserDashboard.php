@@ -4,13 +4,15 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\user\Withdraw;
 use Illuminate\Http\Request;
 
 class UserDashboard extends Controller
 {
     public function index()
     {
-        return view('user.dashboard');
+        $transcations = Withdraw::where('user_id', auth()->user()->id)->get();
+        return view('user.dashboard', compact('transcations'));
     }
 
     public function refer()
