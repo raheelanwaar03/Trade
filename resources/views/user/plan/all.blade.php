@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from bplugins.net/hipre/referral-link.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2024 20:47:15 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Hipre - HYIP Investment Website HTML5 Template</title>
-
-    <!-- Fav Icon -->
+    <title>Trades Sphere - We welcome our investors with huge love</title>
     <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -34,9 +29,6 @@
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
 
 </head>
-
-
-<!-- Boxed Wrapper -->
 
 <body>
 
