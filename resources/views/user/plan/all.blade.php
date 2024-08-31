@@ -31,7 +31,7 @@
 </head>
 
 <body>
-
+    <x-alert />
     <div class="boxed_wrapper">
         <header class="dashboard-header">
             <div class="outer-container">
@@ -150,8 +150,8 @@
                                             <span class="key-text">Key Features :</span>
                                             <ul class="feature-list clearfix">
                                                 <li>Basic Moderate Returns</li>
-                                                <li>Expected Return 5% to 25%</li>
-                                                <li>General Support</li>
+                                                <li>Expected Return {{ $item->percentage }}%</li>
+                                                <li>Daily Profit {{ $item->daily_profit }}%</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -180,7 +180,8 @@
                             @csrf
                             <div class="form-group">
                                 <label>Amount</label>
-                                <input type="text" name="amount" placeholder="$00000">
+                                <input type="number" class="form-control bg-transparent"
+                                    style="border-radius: 7px;border:1px solid rgb(83, 82, 82);color:white" name="amount" placeholder="$00000">
                             </div>
                             <div class="form-group">
                                 <label>Select Plan</label>
