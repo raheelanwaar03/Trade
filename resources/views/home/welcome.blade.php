@@ -298,26 +298,28 @@
             </div>
             <div class="row clearfix">
                 @forelse ($plans as $item)
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <span class="upper-text">{{ $item->name }}</span>
-                            <h2>{{ $item->min }}</h2>
-                            <a href="#" class="theme-btn">Get It Now</a>
-                            <ul class="list-item clearfix">
-                                <li>1 business account</li>
-                                <li>Lifetime</li>
-                            </ul>
-                            <span class="key-text">Key Features :</span>
-                            <ul class="feature-list clearfix">
-                                <li>Basic Moderate Returns</li>
-                                <li>Expected Return 5% to 7$</li>
-                                <li>General Support</li>
-                            </ul>
+                    <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                        <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <span class="upper-text">{{ $item->name }}</span>
+                                <h2>{{ $item->min }}
+                                    <span style="font-size: 25px">(min)</span>
+                                </h2>
+                                <a href="{{ route('User.Plans') }}" class="theme-btn">Get It Now</a>
+                                <ul class="list-item clearfix">
+                                    <li>1 business account</li>
+                                    <li>Lifetime</li>
+                                </ul>
+                                <span class="key-text">Key Features :</span>
+                                <ul class="feature-list clearfix">
+                                    <li>Basic Moderate Returns</li>
+                                    <li>Expected Return {{ $item->percentage }}%</li>
+                                    <li>Daily Profit {{ $item->daily_profit }}%</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @empty
                     <h3 class="text-center text-white">Empty</h3>
                 @endforelse

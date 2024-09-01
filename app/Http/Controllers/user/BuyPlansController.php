@@ -19,15 +19,6 @@ class BuyPlansController extends Controller
     public function buyPlan(Request $request)
     {
         // return $request;
-        // checking refer
-        $user = User::where('user_id', auth()->user()->referral)->first();
-        if ($user == null) {
-            return 1;
-        } else {
-            // give user 20% commission on purchasing amount
-            $user->balance += ($request->amount * 20) / 100;
-            $user->save();
-        }
 
         // checking user balance 
         if ($request->amount > auth()->user()->balance) {
@@ -45,6 +36,14 @@ class BuyPlansController extends Controller
         // deducting amount from user balance
         auth()->user()->update(['balance' => auth()->user()->balance - $request->amount]);
 
+        // checking refer
+        $user = User::where('user_id', auth()->user()->referral)->first();
+        if ($user !== null) {
+            // give user 20% commission on purchasing amount
+            $user->balance += ($request->amount * 20) / 100;
+            $user->save();
+        }
+
         // storing user plan
         $user_plan = new BuyPlans();
         $user_plan->user_id = auth()->user()->id;
@@ -53,5 +52,12 @@ class BuyPlansController extends Controller
         $user_plan->percentage = $plan_percentage;
         $user_plan->daily_profit = $daily_profit;
         $user_plan->save();
+        return back()->with('success', 'Plan purchased successfully');
+    }
+
+    public function purchasedPlan()
+    {
+        $purchasedPlans = BuyPlans::where('user_id', auth()->user()->id)->get();
+        return view('user.plan.purchased', compact('purchasedPlans'));
     }
 }

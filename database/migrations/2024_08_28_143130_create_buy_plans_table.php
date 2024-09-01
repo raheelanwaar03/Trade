@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('buy_plans', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('plan_name');
+            $table->string('amount');
+            $table->string('percentage');
+            $table->string('daily_profit');
             $table->timestamps();
         });
     }

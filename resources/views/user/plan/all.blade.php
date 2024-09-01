@@ -142,7 +142,9 @@
                                         data-wow-duration="1500ms">
                                         <div class="inner-box">
                                             <span class="upper-text">{{ $item->name }}</span>
-                                            <h2>{{ $item->min }}</h2>
+                                            <h2>{{ $item->min }}
+                                                <span style="font-size: 25px">(min)</span>
+                                            </h2>
                                             <ul class="list-item clearfix">
                                                 <li>1 business account</li>
                                                 <li>Lifetime</li>
@@ -181,7 +183,8 @@
                             <div class="form-group">
                                 <label>Amount</label>
                                 <input type="number" class="form-control bg-transparent"
-                                    style="border-radius: 7px;border:1px solid rgb(83, 82, 82);color:white" name="amount" placeholder="$00000">
+                                    style="border-radius: 7px;border:1px solid rgb(83, 82, 82);color:white"
+                                    name="amount" placeholder="$00000">
                             </div>
                             <div class="form-group">
                                 <label>Select Plan</label>
@@ -189,7 +192,8 @@
                                     <select class="wide" name="plan">
                                         <option data-display="Select Plan">Select Plan</option>
                                         @foreach ($plans as $item)
-                                            <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                            <option value="{{ $item->name }}">{{ $item->name }}( {{ $item->min }} )</option>
+
                                         @endforeach
                                     </select>
                                 </div>

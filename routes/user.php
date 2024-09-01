@@ -19,5 +19,6 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     Route::post('Store/Withdraw/Request', [UserWithdrawController::class, 'storeWithdraw'])->name('Store.Withdraw');
     // plans
     Route::get('Plans', [BuyPlansController::class, 'plans'])->name('Plans');
+    Route::get('Purchased/Plans', [BuyPlansController::class, 'purchasedPlan'])->name('Purchased.Plans');
     Route::post('Buy/Plan', [BuyPlansController::class, 'buyPlan'])->name('Buy.Plan');
 });
