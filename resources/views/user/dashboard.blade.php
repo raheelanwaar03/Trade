@@ -19,7 +19,7 @@
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/deposit.png') }}"
                                         alt=""></div>
                                 <span>Deposit</span>
-                                <h2>{{ total_deposit() }}</h2>
+                                <h2>{{ user_deposit() }}</h2>
                             </a>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12 column">
@@ -27,13 +27,13 @@
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/withdraw.png') }}"
                                         alt=""></div>
                                 <span>Withdraw</span>
-                                <h2>{{ total_withdraw() }}</h2>
+                                <h2>{{ user_withdraw() }}</h2>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="table-content">
-                    <div class="title-box text-center">Transaction History</div>
+                    <div class="title-box text-center">Withdraw Transaction History</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>

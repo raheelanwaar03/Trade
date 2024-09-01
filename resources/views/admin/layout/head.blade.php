@@ -91,20 +91,19 @@
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
                     <li><a href="#"><img src="{{ asset('assets/images/icons/icon-39.svg') }}"
                                 alt="">Deposit Report</a></li>
-                    <li><a href="{{ route('Admin.Pending.Withdraws') }}"><img src="{{ asset('assets/images/icons/icon-35.svg') }}"
-                                alt="">Withdraw</a></li>
+                    <li><a href="{{ route('Admin.Pending.Withdraws') }}"><img
+                                src="{{ asset('assets/images/icons/icon-35.svg') }}" alt="">Withdraw</a></li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
-                                alt="">Buy Package</a>
+                                alt="">All Plans</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-34.svg') }}"
-                                alt="">Buy Package
-                            History</a>
+                    <li><a href="{{ route('Admin.All.Sold.Plans') }}"><img
+                                src="{{ asset('assets/images/icons/icon-34.svg') }}" alt="">Sold Plans</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-36.svg') }}"
                                 alt="">My Direct</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-37.svg') }}"
-                                alt="">Level Report</a>
+                    <li><a href="{{ route('Admin.Given.Reward') }}"><img
+                                src="{{ asset('assets/images/icons/icon-37.svg') }}" alt="">Given Profit</a>
                     </li>
                     <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-38.svg') }}"
                                 alt="">Rank &

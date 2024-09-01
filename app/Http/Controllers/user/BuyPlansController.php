@@ -52,7 +52,7 @@ class BuyPlansController extends Controller
         $user_plan->percentage = $plan_percentage;
         $user_plan->daily_profit = $daily_profit;
         $user_plan->save();
-        return back()->with('success', 'Plan purchased successfully');
+        return redirect()->route('User.Purchased.Plans')->with('success', 'Plan purchased successfully');
     }
 
     public function purchasedPlan()

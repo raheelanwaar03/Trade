@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminDashboard;
 use App\Http\Controllers\admin\AdminDepositController;
 use App\Http\Controllers\admin\AdminWithdrawController;
+use App\Http\Controllers\admin\PlansController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,4 +23,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Make/Withdraw/Rejected', [AdminWithdrawController::class, 'rejectedWithdraw'])->name('Rejected.Withdraw');
     Route::get('Make/Withdraw/Approve/{id}', [AdminWithdrawController::class, 'approveWithdraw'])->name('Approve.Withdraw');
     Route::get('Make/Withdraw/Reject/{id}', [AdminWithdrawController::class, 'rejectWithdraw'])->name('Reject.Withdraw');
+    // plans
+    Route::get('All/Sold/Plans', [PlansController::class, 'soldPlans'])->name('All.Sold.Plans');
+    Route::get('Give/Plans/Reward', [PlansController::class, 'giveReward'])->name('Give.Plans.Reward');
+    Route::get('Given/Reward', [PlansController::class, 'givenReward'])->name('Given.Reward');
 });
