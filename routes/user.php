@@ -13,6 +13,7 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     Route::get('/My/Team', [UserDashboard::class, 'team'])->name('My.Team');
     // deposit
     Route::get('/Deposit', [DepositController::class, 'deposit'])->name('Deposit');
+    Route::get('/Deposit/Report', [DepositController::class, 'depositReport'])->name('Deposit.Report');
     Route::post('/Deposit/Request', [DepositController::class, 'request'])->name('Deposit.Request');
     // Withdraw
     Route::get('Withdraw/Page', [UserWithdrawController::class, 'withdrawIndex'])->name('Apply.Withdraw');
@@ -21,4 +22,6 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     Route::get('Plans', [BuyPlansController::class, 'plans'])->name('Plans');
     Route::get('Purchased/Plans', [BuyPlansController::class, 'purchasedPlan'])->name('Purchased.Plans');
     Route::post('Buy/Plan', [BuyPlansController::class, 'buyPlan'])->name('Buy.Plan');
+    // bouns
+    Route::get('/All/Rewards', [UserDashboard::class, 'rewards'])->name('All.Rewards');
 });

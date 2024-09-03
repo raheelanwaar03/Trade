@@ -5,31 +5,33 @@
         <div class="outer-container">
             <div class="dashboard-content">
                 <div class="table-content">
-                    <div class="title-box text-center">Team Members</div>
+                    <div class="title-box text-center">Daily Reward</div>
                     <div class="dashboard-table">
                         <table id="example">
                             <thead>
                                 <tr>
                                     <th>User ID</th>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <th>Bouns</th>
+                                    <th>Type</th>
                                     <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($team as $item)
+                                @forelse ($rewards as $item)
                                     <tr>
-                                        <td>{{ $item->user_id }}</td>
+                                        <td>{{ auth()->user()->user_id }}</td>
                                         <td>
                                             <div class="author-box">
                                                 <div class="author-image"><img
                                                         src="{{ asset('assets/images/resource/author-5.png') }}"
                                                         alt="">
                                                 </div>
-                                                <span class="name">{{ $item->name }}</span>
+                                                <span class="name">{{ auth()->user()->name }}</span>
                                             </div>
                                         </td>
-                                        <td class="email">{{ $item->email }}</td>
+                                        <td>{{ $item->amount }}</td>
+                                        <td>{{ $item->type }}</td>
                                         <td class="date"><img src="{{ asset('assets/images/icons/icon-46.svg') }}"
                                                 alt="">
                                             {{ date('d-m-Y', strtotime($item->created_at)) }}

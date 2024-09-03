@@ -56,4 +56,10 @@ class DepositController extends Controller
 
         return redirect()->route('User.Dashboard')->with('success', 'Submitted successfully! Wait for Admin Approval');
     }
+
+    public function depositReport()
+    {
+        $transcations = Deposit::where('user_id', auth()->user()->id)->get();
+        return view('user.deposit.all', compact('transcations'));
+    }
 }
