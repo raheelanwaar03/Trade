@@ -110,8 +110,9 @@
                     </li>
                     <li><a href="{{ route('User.Apply.Withdraw') }}"><img
                                 src="{{ asset('assets/images/icons/icon-35.svg') }}" alt="">Withdraw</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-42.svg') }}"
-                                alt="">Log Out</a>
+                    <li><a href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><img
+                                src="{{ asset('assets/images/icons/icon-42.svg') }}" alt="">Log Out</a>
                     </li>
                 </ul>
             </div>
