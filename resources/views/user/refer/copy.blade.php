@@ -14,7 +14,6 @@
                         <input type="text" name="reffer-code"
                             value="{{ route('register', ['referral' => Auth::user()->user_id]) }}" id="myInput" readonly>
                         <div class="btn-box">
-                            <a href="#" class="share-btn">Share</a>
                             <button type="button" class="btn btn-primary" onclick="copy()">Copy</button>
                         </div>
                     </div>

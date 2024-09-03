@@ -48,7 +48,8 @@
                                         alt="">
                                 </figure>
                                 <ul class="dropdown-box">
-                                    <li><a href="#"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
+                                    <li><a href="{{ route('profile.edit') }}"><img
+                                                src="{{ asset('assets/images/icons/icon-28.svg') }}"
                                                 alt="">Profile</a>
                                     </li>
                                     <li><a href="#">
