@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Plans;
 use App\Models\User;
 use App\Models\user\BuyPlans;
 use App\Models\user\history;
@@ -45,4 +46,17 @@ class PlansController extends Controller
         $rewards = history::get();
         return view('admin.plan.givenReward', compact('rewards'));
     }
+
+    public function allPlans()
+    {
+        $plans = Plans::get();
+        return view('admin.plan.all', compact('plans'));
+    }
+
+    public function addPlan()
+    {
+        return view('admin.plan.add');
+    }
+
+
 }

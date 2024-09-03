@@ -25,6 +25,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Make/Withdraw/Reject/{id}', [AdminWithdrawController::class, 'rejectWithdraw'])->name('Reject.Withdraw');
     // plans
     Route::get('All/Sold/Plans', [PlansController::class, 'soldPlans'])->name('All.Sold.Plans');
+    Route::get('All/Plans', [PlansController::class, 'allPlans'])->name('All.Plans');
+    Route::get('Add/Plan', [PlansController::class, 'addPlan'])->name('Add.Plan');
     Route::get('Give/Plans/Reward', [PlansController::class, 'giveReward'])->name('Give.Plans.Reward');
     Route::get('Given/Reward', [PlansController::class, 'givenReward'])->name('Given.Reward');
 });

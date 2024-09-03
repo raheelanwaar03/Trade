@@ -1,27 +1,26 @@
-@extends('user.layout.app')
+@extends('admin.layout.app')
+
 @section('content')
     <section class="dashboard-section">
         <div class="outer-container">
             <div class="dashboard-content">
                 <div class="pricing-dashboard">
-                    <div class="upper-box d-flex justify-content-between align-items-center">
-                        <div class="">
-                            <ul class="text-list clearfix">
-                                <li>User Name : <span style="text-transform:uppercase;">{{ auth()->user()->name }}</span>
-                                </li>
-                                <li>Balance {{ auth()->user()->balance }} </li>
-                                <li>Purchased Plans </li>
-                            </ul>
+                    <div class="upper-box">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 style="color: yellow">Hi <span style="text-transform:uppercase;">{{ auth()->user()->name }}
+                                    Welcome to Plans
+                                    Page</span></h5>
+                            <a href="{{ route('Admin.Add.Plan') }}" class="btn btn-warning text-white">Add New Plan</a>
                         </div>
                     </div>
                     <div class="row clearfix">
-                        @forelse ($purchasedPlans as $item)
+                        @forelse ($plans as $item)
                             <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
                                 <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500ms">
                                     <div class="inner-box">
-                                        <span class="upper-text">{{ $item->plan_name }}</span>
-                                        <h2>{{ $item->amount }}</h2>
+                                        <span class="upper-text">{{ $item->name }}</span>
+                                        <h2>{{ $item->min }}</h2>
                                         <ul class="list-item clearfix">
                                             <li>1 business account</li>
                                             <li>Lifetime</li>

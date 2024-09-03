@@ -89,30 +89,17 @@
                                 src="{{ asset('assets/images/icons/icon-31.svg') }}" alt="">Dashboard</a></li>
                     <li><a href="{{ route('Admin.Pending.Deposit.Requests') }}"><img
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
-                    <li><a href="#"><img src="{{ asset('assets/images/icons/icon-39.svg') }}"
-                                alt="">Deposit Report</a></li>
                     <li><a href="{{ route('Admin.Pending.Withdraws') }}"><img
                                 src="{{ asset('assets/images/icons/icon-35.svg') }}" alt="">Withdraw</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
-                                alt="">All Plans</a>
+                    <li><a href="{{ route('Admin.All.Plans') }}"><img
+                                src="{{ asset('assets/images/icons/icon-33.svg') }}" alt="">All Plans</a>
                     </li>
                     <li><a href="{{ route('Admin.All.Sold.Plans') }}"><img
                                 src="{{ asset('assets/images/icons/icon-34.svg') }}" alt="">Sold Plans</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-36.svg') }}"
-                                alt="">My Direct</a>
-                    </li>
                     <li><a href="{{ route('Admin.Given.Reward') }}"><img
                                 src="{{ asset('assets/images/icons/icon-37.svg') }}" alt="">Given Profit</a>
                     </li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-38.svg') }}"
-                                alt="">Rank &
-                            Rewards</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-40.svg') }}"
-                                alt="">Transactions</a></li>
-                    <li><a href="index.html"><img src="{{ asset('assets/images/icons/icon-41.svg') }}"
-                                alt="">Affiliate
-                            Tools</a></li>
                     <li><a href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><img
                                 src="{{ asset('assets/images/icons/icon-42.svg') }}" alt="">Log Out</a>
