@@ -43,6 +43,7 @@
             <div class="text">Can’t login? <a href="{{ route('register') }}">Sign up for new user?</a></div>
         </div>
     </section>
+@endsection
 
 @section('scripts')
     <script>
@@ -58,6 +59,4 @@
             }
         });
     </script>
-@endsection
-
 @endsection

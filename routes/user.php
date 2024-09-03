@@ -11,6 +11,8 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     Route::get('/Dashboard', [UserDashboard::class, 'index'])->name('Dashboard');
     Route::get('/Refer/Member', [UserDashboard::class, 'refer'])->name('Refer.New.User');
     Route::get('/My/Team', [UserDashboard::class, 'team'])->name('My.Team');
+    Route::get('/Change/Password', [UserDashboard::class, 'changePassword'])->name('Change.Password');
+    Route::post('/Update/Password/{id}', [UserDashboard::class, 'updatePassword'])->name('Update.Password');
     // deposit
     Route::get('/Deposit', [DepositController::class, 'deposit'])->name('Deposit');
     Route::get('/Deposit/Report', [DepositController::class, 'depositReport'])->name('Deposit.Report');

@@ -52,7 +52,7 @@
                                                 src="{{ asset('assets/images/icons/icon-28.svg') }}"
                                                 alt="">Profile</a>
                                     </li>
-                                    <li><a href="#">
+                                    <li><a href="{{ route('User.Change.Password') }}">
                                             <img src="{{ asset('assets/images/icons/icon-29.svg') }}" alt="">
                                             Password</a>
                                     </li>
