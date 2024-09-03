@@ -33,7 +33,7 @@
                             <input type="checkbox" name="remember" id="remember">
                             <label for="remember">Remember me</label>
                         </div>
-                        <a href="{{ route('password.update') }}" style="font-size:12px;color:white">Forgot Password</a>
+                        <a href="{{ route('password.email') }}" style="font-size:12px;color:white">Forgot Password</a>
                     </div>
                     <div class="btn-box">
                         <button type="submit" class="theme-btn">Login</button>

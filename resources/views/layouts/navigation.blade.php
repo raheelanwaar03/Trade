@@ -149,7 +149,7 @@
                 <div class="nav-logo"><a href="index.html"
                         style="margin-right: 16px;color: white;text-decoration: none;">
                         <img src="{{ asset('assets/images/logo.png') }}">
-                        Trade Sphere
+                        {{ env('APP_NAME') }}
                     </a>
                 </div>
                 <div class="menu-outer">
