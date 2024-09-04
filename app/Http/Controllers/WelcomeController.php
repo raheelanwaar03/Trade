@@ -15,6 +15,22 @@ class WelcomeController extends Controller
 
     public function plans()
     {
-        return view('home.plans');
+        $plans = Plans::get();
+        return view('home.plans', compact('plans'));
+    }
+
+    public function contact()
+    {
+        return view('home.contact');
+    }
+
+    public function about()
+    {
+        return view('home.about');
+    }
+
+    public function back(Request $request)
+    {
+        return redirect()->back()->with('success', 'We will response you back as soon as possible');
     }
 }

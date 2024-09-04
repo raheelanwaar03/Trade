@@ -74,12 +74,17 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="index.html">Home</a></li>
-                                    <li class=""><a href="service-details.html">Plans</a>
+                                    <li class="{{ request()->is('/') ? 'current' : '' }}"><a
+                                            href="{{ route('Welcome') }}">Home</a></li>
+                                    <li class="{{ request()->is('Welcome/Plans') ? 'current' : '' }}"><a
+                                            href="{{ route('Plans') }}">Plans</a>
                                     </li>
-                                    <li><a href="service.html">About Us</a>
+                                    <li class="{{ request()->is('About-Us') ? 'current' : '' }}"><a
+                                            href="{{ route('About') }}">About Us</a>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li class="{{ request()->is('Contact-Us') ? 'current' : '' }}"><a
+                                            href="{{ route('Contact') }}">Contact</a>
+                                    </li>
                                     @if (auth()->user())
                                         <li class="dropdown"><a href="#">Auth</a>
                                             <ul>

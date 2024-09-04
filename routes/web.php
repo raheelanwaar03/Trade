@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\Route;
 // welcome Page
 
 Route::get('/', [WelcomeController::class, 'welcome'])->name('Welcome');
-Route::get('/Plans', [WelcomeController::class, 'plans'])->name('Plans');
+Route::get('/Contact-Us', [WelcomeController::class, 'contact'])->name('Contact');
+Route::get('/About-Us', [WelcomeController::class, 'about'])->name('About');
+Route::get('/Welcome/Plans', [WelcomeController::class, 'plans'])->name('Plans');
+Route::post('/back', [WelcomeController::class, 'back'])->name('back');
 
 
 Route::get('/dashboard', function () {
