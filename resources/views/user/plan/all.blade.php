@@ -36,7 +36,7 @@
         <header class="dashboard-header">
             <div class="outer-container">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"></a>
+                            src="{{ asset('assets/images/resource/logo.png') }}" height="100px" width="100px"></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
@@ -51,10 +51,11 @@
                                         alt="">
                                 </figure>
                                 <ul class="dropdown-box">
-                                    <li><a href="#"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
+                                    <li><a href="{{ route('profile.edit') }}"><img
+                                                src="{{ asset('assets/images/icons/icon-28.svg') }}"
                                                 alt="">Profile</a>
                                     </li>
-                                    <li><a href="#">
+                                    <li><a href="{{ route('User.Change.Password') }}">
                                             <img src="{{ asset('assets/images/icons/icon-29.svg') }}" alt="">
                                             Password</a>
                                     </li>
