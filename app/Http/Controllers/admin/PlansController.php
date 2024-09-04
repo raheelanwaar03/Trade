@@ -58,5 +58,44 @@ class PlansController extends Controller
         return view('admin.plan.add');
     }
 
+    public function storePlan(Request $request)
+    {
+        // store image in plans
+        $image = $request->file('image');
+        $imageName = rand(11111, 99999) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('plans'), $imageName);
+        // store plan
 
+        $plan = new Plans();
+        $plan->name = $request->name;
+        $plan->min = $request->min;
+        $plan->percentage = $request->percentage;
+        $plan->daily_profit = $request->daily_profit;
+        $plan->image = $imageName;
+        $plan->save();
+        return back()->with('success', 'Plan added successfully');
+    }
+
+    public function editPlan($id)
+    {
+        $plan = Plans::find($id);
+        return view('admin.plan.edit', compact('plan'));
+    }
+
+    public function updatePlan(Request $request, $id)
+    {
+        $plan = Plans::find($id);
+        $plan->name = $request->name;
+        $plan->min = $request->min;
+        $plan->percentage = $request->percentage;
+        $plan->daily_profit = $request->daily_profit;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = rand(11111, 99999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('plans'), $imageName);
+            $plan->image = $imageName;
+        }
+        $plan->save();
+        return back()->with('success', 'Plan updated successfully');
+    }
 }

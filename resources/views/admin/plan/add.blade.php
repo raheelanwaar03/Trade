@@ -9,13 +9,38 @@
                     <div class="row clearfix mt-4">
                         <div class="col-lg-12 col-md-12 col-sm-12 column">
                             <div class="card single-item">
+                                {{-- add title --}}
+                                <div class="card-header">
+                                    <h3 class="card-title text-center" style="color: #deff10">Add New Plan</h3>
+                                </div>
                                 <div class="card-body">
-                                    <form action="{{ route('Admin.Update.Deposit',auth()->user()->id) }}" method="POST">
+                                    <form action="{{ route('Admin.Store.Plan') }}" method="POST"
+                                        enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="amount">Amount</label>
-                                            <input type="number" id="amount" name="amount"
-                                                class="form-control bg-transparent text-white">
+                                            <label for="name">Plan Name</label>
+                                            <input type="text" id="name" name="name"
+                                                class="form-control bg-transparent text-white" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="min">Minimum Amount</label>
+                                            <input type="number" id="min" name="min"
+                                                class="form-control bg-transparent text-white" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="percentage">Plan Percentage</label>
+                                            <input type="number" id="percentage" name="percentage"
+                                                class="form-control bg-transparent text-white" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="daily_profit">Daily Profit</label>
+                                            <input type="number" step="0.025" id="daily_profit" name="daily_profit"
+                                                class="form-control bg-transparent text-white" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image">Image</label>
+                                            <input type="file" id="image" name="image"
+                                                class="form-control bg-transparent text-white" required>
                                         </div>
                                         <div class="mt-3">
                                             <button type="submit" class="btn btn-warning text-white">Submit</button>

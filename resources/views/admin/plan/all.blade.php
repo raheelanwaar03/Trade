@@ -17,10 +17,12 @@
                         @forelse ($plans as $item)
                             <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
                                 <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
-                                    data-wow-duration="1500ms">
+                                    data-wow-duration="1500ms"
+                                    style="background-image: url('{{ asset('plans/' . $item->image) }}');background-size: cover;background-position: center;background-repeat: no-repeat;color:#deff10;font-size:20px;">
                                     <div class="inner-box">
                                         <span class="upper-text">{{ $item->name }}</span>
-                                        <h2>{{ $item->min }}</h2>
+                                        <h2>{{ $item->min }}-1000000</h2>
+                                        <a href="{{ route('Admin.Edit.Plan', $item->id) }}" class="theme-btn">Update</a>
                                         <ul class="list-item clearfix">
                                             <li>1 business account</li>
                                             <li>Lifetime</li>

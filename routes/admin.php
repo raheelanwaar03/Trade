@@ -29,4 +29,7 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/Plan', [PlansController::class, 'addPlan'])->name('Add.Plan');
     Route::get('Give/Plans/Reward', [PlansController::class, 'giveReward'])->name('Give.Plans.Reward');
     Route::get('Given/Reward', [PlansController::class, 'givenReward'])->name('Given.Reward');
+    Route::post('Store/Plan', [PlansController::class, 'storePlan'])->name('Store.Plan');
+    Route::get('Edit/Plan/{id}', [PlansController::class, 'editPlan'])->name('Edit.Plan');
+    Route::post('Update/Plan/{id}', [PlansController::class, 'updatePlan'])->name('Update.Plan');
 });
