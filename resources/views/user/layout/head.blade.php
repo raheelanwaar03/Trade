@@ -32,7 +32,7 @@
         <header class="dashboard-header">
             <div class="outer-container">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/resource/logo.png') }}" height="100px" width="100px"></a>
+                            src="{{ asset('assets/images/logo.png') }}" height="100px" width="100px"></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
