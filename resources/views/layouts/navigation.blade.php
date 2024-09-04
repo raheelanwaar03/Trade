@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from bplugins.net/Trades Sphere/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Aug 2024 20:44:54 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Trades Sphere - We welcome our investors with huge love</title>
+    <title>{{ env('APP_NAME') }} - We welcome our investors with huge love</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;display=swap" rel="stylesheet">
@@ -59,10 +56,10 @@
             <div class="outer-container">
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index.html" style="text-decoration: none;color: white;"><img
-                                    src="{{ asset('assets/logo.png') }}"
-                                    style="height: 55px;width: 55px;margin-right: 7px;">Trade
-                                Sphere</a>
+                        <figure class="logo"><a href="{{ route('Welcome') }}"
+                                style="text-decoration: none;color: white;"><img
+                                    src="{{ asset('assets/images/logo.png') }}"
+                                    style="height: 150px;width: 150px;margin-right: 7px;"></a>
                         </figure>
                     </div>
                     <div class="menu-area">
@@ -126,7 +123,8 @@
                     <div class="outer-box">
                         <div class="logo-box">
                             <figure class="logo"><a href="{{ route('Welcome') }}"><img
-                                        src="{{ asset('assets/images/logo.png') }}" alt=""></a>
+                                        src="{{ asset('assets/images/logo.png') }}" height="150px" width="150px"
+                                        alt=""></a>
                             </figure>
                         </div>
                         <div class="menu-area">
@@ -151,10 +149,9 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"
+                <div class="nav-logo"><a href="{{ route('Welcome') }}"
                         style="margin-right: 16px;color: white;text-decoration: none;">
-                        <img src="{{ asset('assets/images/logo.png') }}">
-                        {{ env('APP_NAME') }}
+                        <img src="{{ asset('assets/images/logo.png') }}" height="160px" width="160px">
                     </a>
                 </div>
                 <div class="menu-outer">
