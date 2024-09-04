@@ -32,12 +32,12 @@
         <header class="dashboard-header">
             <div class="outer-container">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/logo.png') }}" height="100px" width="100px"></a>
+                            src="{{ asset('assets/images/resource/logo.png') }}" height="100px" width="100px"></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
                         <div class="menu-text mobile-nav-toggler"><img
-                                src="{{ asset('assets/images/icons/icon-23.svg') }}" height="130px" width="130px">
+                                src="{{ asset('assets/images/icons/icon-23.svg') }}" alt="">
                             <span>Menu</span>
                         </div>
                         <div class="right-content" style="margin-left: 180px">
