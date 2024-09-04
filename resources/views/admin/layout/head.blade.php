@@ -31,8 +31,8 @@
         <header class="dashboard-header">
             <div class="outer-container">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/logo.png') }}" alt=""><span
-                            style="color: white;margin-right:14px;">{{ env('APP_NAME') }}</span></a>
+                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"
+                            alt=""></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
@@ -44,7 +44,7 @@
                             <div class="admin-box">
                                 <span>{{ auth()->user()->name }}</span>
                                 <figure class="image-box"><img src="{{ asset('assets/images/resource/admin.png') }}"
-                                        alt="">
+                                        height="100px" width="100px">
                                 </figure>
                                 <ul class="dropdown-box">
                                     <li><a href="#"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
@@ -81,8 +81,8 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <div class="dashboard-sidebar">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/logo.png') }}" alt=""><span
-                            style="color: white;margin-left:12px;">{{ env('APP_NAME') }}</span></a>
+                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"
+                            alt=""></a>
                 </figure>
                 <ul class="dashboard-category-list">
                     <li><a href="{{ route('Admin.Dashboard') }}" class="current"><img
