@@ -72,27 +72,5 @@ class clean extends Command
         $account->bank_name = 'Jazzcash';
         $account->account_num = '03121122555';
         $account->save();
-
-        // adding plans
-        $plan = new Plans();
-        $plan->name = 'Real-State';
-        $plan->min = '1500';
-        $plan->percentage = '20';
-        $plan->daily_profit = '0.6';
-        $plan->save();
-
-        $plan = new Plans();
-        $plan->name = 'Bitcoin Mining';
-        $plan->min = '2500';
-        $plan->percentage = '20';
-        $plan->daily_profit = '0.6';
-        $plan->save();
-
-        $plan = new Plans();
-        $plan->name = 'Solar Energy';
-        $plan->min = '1000';
-        $plan->percentage = '20';
-        $plan->daily_profit = '0.6';
-        $plan->save();
     }
 }

@@ -141,13 +141,11 @@
                         <div class="row clearfix">
                             @forelse ($plans as $item)
                                 <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="inner-box">
+                                    <div class="pricing-block-one wow fadeInUp animated">
+                                        <div class="inner-box" data-wow-delay="00ms" data-wow-duration="1500ms"
+                                            style="background-image: url('{{ asset('assets/images/resource/solarplates.jpg') }}');background-size: cover;background-position: center;background-repeat: no-repeat;color:#deff10;font-size:20px;">
                                             <span class="upper-text">{{ $item->name }}</span>
-                                            <h2>{{ $item->min }}
-                                                <span style="font-size: 25px">(min)</span>
-                                            </h2>
+                                            <h2>{{ $item->min }}-100000</h2>
                                             <ul class="list-item clearfix">
                                                 <li>1 business account</li>
                                                 <li>Lifetime</li>
