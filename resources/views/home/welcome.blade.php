@@ -303,8 +303,7 @@
                             data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <span class="upper-text">{{ $item->name }}</span>
-                                <h2>{{ $item->min }}
-                                    <span style="font-size: 25px">(min)</span>
+                                <h2>{{ $item->min }}-100000
                                 </h2>
                                 <a href="{{ route('User.Plans') }}" class="theme-btn">Get It Now</a>
                                 <ul class="list-item clearfix">

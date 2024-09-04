@@ -143,7 +143,7 @@
                                 <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
                                     <div class="pricing-block-one wow fadeInUp animated">
                                         <div class="inner-box" data-wow-delay="00ms" data-wow-duration="1500ms"
-                                            style="background-image: url('{{ asset('assets/images/resource/solarplates.jpg') }}');background-size: cover;background-position: center;background-repeat: no-repeat;color:#deff10;font-size:20px;">
+                                            style="background-image: url('{{ asset('plans/' . $item->image) }}');background-size: cover;background-position: center;background-repeat: no-repeat;color:#deff10;font-size:20px;">
                                             <span class="upper-text">{{ $item->name }}</span>
                                             <h2>{{ $item->min }}-100000</h2>
                                             <ul class="list-item clearfix">
