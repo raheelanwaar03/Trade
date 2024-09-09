@@ -30,9 +30,8 @@
         <!-- Dashboard Header -->
         <header class="dashboard-header">
             <div class="outer-container">
-                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"
-                            alt=""></a>
+                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img style="height: 80px; width:80px;"
+                            src="{{ asset('assets/images/logo.png') }}" alt=""></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
@@ -80,9 +79,8 @@
         <div class="mobile-menu dashboard-mobile-menu">
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <div class="dashboard-sidebar">
-                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"
-                            alt=""></a>
+                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img style="height: 80px;width:80px;"
+                            src="{{ asset('assets/images/1.png') }}" alt=""></a>
                 </figure>
                 <ul class="dashboard-category-list">
                     <li><a href="{{ route('Admin.Dashboard') }}" class="current"><img

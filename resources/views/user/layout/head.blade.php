@@ -82,7 +82,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <div class="dashboard-sidebar">
                 <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
-                            src="{{ asset('assets/images/resource/logo.png') }}" height="150px" width="150px"
+                            style="height: 80px; width:100px" src="{{ asset('assets/images/resource/logo.png') }}"
                             alt=""></a>
                 </figure>
                 <ul class="dashboard-category-list">

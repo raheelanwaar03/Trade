@@ -56,10 +56,8 @@
             <div class="outer-container">
                 <div class="outer-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="{{ route('Welcome') }}"
-                                style="text-decoration: none;color: white;"><img
-                                    src="{{ asset('assets/images/logo.png') }}"
-                                    style="height: 150px;width: 150px;margin-right: 7px;"></a>
+                        <figure class=""><a href="{{ route('Welcome') }}"><img style="height:80px;width:80px;"
+                                    src="{{ asset('assets/images/logo.png') }}"></a>
                         </figure>
                     </div>
                     <div class="menu-area">
@@ -83,20 +81,16 @@
                                             href="{{ route('Contact') }}">Contact</a>
                                     </li>
                                     @if (auth()->user())
-                                        <li class="dropdown"><a href="#">Auth</a>
-                                            <ul>
-                                                {{-- adding logout button with icon --}}
-                                                <li><a href="{{ route('logout') }}"
-                                                        onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                                        <i class="fa fa-sign-out"></i>
-                                                        Logout</a>
-                                                    <form id="logout-form" action="{{ route('logout') }}"
-                                                        method="POST" style="display: none;">
-                                                        @csrf
-                                                    </form>
-                                                </li>
-                                            </ul>
+                                        <li><a href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                                <i class="fa fa-sign-out"></i>
+                                                Logout</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </li>
                                         </li>
                                     @else
                                         <li class="{{ request()->is('login') ? 'current' : '' }}"><a
@@ -123,7 +117,7 @@
                     <div class="outer-box">
                         <div class="logo-box">
                             <figure class="logo"><a href="{{ route('Welcome') }}"><img
-                                        src="{{ asset('assets/images/logo.png') }}" height="150px" width="150px"
+                                        style="height:80px;width:80px;" src="{{ asset('assets/images/logo.png') }}"
                                         alt=""></a>
                             </figure>
                         </div>
@@ -149,9 +143,8 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="{{ route('Welcome') }}"
-                        style="margin-right: 16px;color: white;text-decoration: none;">
-                        <img src="{{ asset('assets/images/logo.png') }}" height="160px" width="160px">
+                <div class="nav-logo"><a href="{{ route('Welcome') }}">
+                        <img src="{{ asset('assets/images/logo.png') }}" style="height:80px;width:80px;">
                     </a>
                 </div>
                 <div class="menu-outer">
