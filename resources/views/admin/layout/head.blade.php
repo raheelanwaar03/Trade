@@ -30,8 +30,8 @@
         <!-- Dashboard Header -->
         <header class="dashboard-header">
             <div class="outer-container">
-                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img style="height: 80px; width:80px;"
-                            src="{{ asset('assets/images/logo.png') }}" alt=""></a>
+                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img
+                            src="{{ asset('assets/images/resource/logo.png') }}" height="100px" width="100px"></a>
                 </figure>
                 <div class="header-content">
                     <div class="left-content">
@@ -42,8 +42,9 @@
                         <div class="right-content" style="margin-left: 180px">
                             <div class="admin-box">
                                 <span>{{ auth()->user()->name }}</span>
-                                <figure class="image-box"><img src="{{ asset('assets/images/resource/admin.png') }}"
-                                        height="100px" width="100px">
+                                <figure class="image-box">
+                                    <img src="{{ asset('assets/images/resource/admin.png') }}" height="100px"
+                                        width="100px">
                                 </figure>
                                 <ul class="dropdown-box">
                                     <li><a href="#"><img src="{{ asset('assets/images/icons/icon-28.svg') }}"
@@ -79,8 +80,8 @@
         <div class="mobile-menu dashboard-mobile-menu">
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <div class="dashboard-sidebar">
-                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img style="height: 80px;width:80px;"
-                            src="{{ asset('assets/images/1.png') }}" alt=""></a>
+                <figure class="logo-box"><a href="{{ route('User.Dashboard') }}"><img style="height: 80px; width:100px"
+                            style="height: 80px; width:100px" src="{{ asset('assets/images/resource/logo.png') }}" alt="logo"></a>
                 </figure>
                 <ul class="dashboard-category-list">
                     <li><a href="{{ route('Admin.Dashboard') }}" class="current"><img
