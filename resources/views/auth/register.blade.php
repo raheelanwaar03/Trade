@@ -12,7 +12,7 @@
         <div class="auto-container">
             <div class="section-title">
                 <span class="sub-title">Sign Up</span>
-                <h2>Welcome To Hipre</h2>
+                <h2>Welcome To {{ env('APP_NAME') }}</h2>
             </div>
             <div class="form-box">
                 <h4>Sign Up to your account</h4>

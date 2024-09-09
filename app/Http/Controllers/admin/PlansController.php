@@ -7,6 +7,7 @@ use App\Models\admin\Plans;
 use App\Models\User;
 use App\Models\user\BuyPlans;
 use App\Models\user\history;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PlansController extends Controller
@@ -23,19 +24,18 @@ class PlansController extends Controller
 
         // give every buyer 0.6% of there investment today and check if he get today reward
         foreach ($soldPlans as $plan) {
-            $reward = $plan->amount * 0.006;
+            $reward = $plan->amount * $plan->daily_profit / 100;
             // check if user get today reward
-            $history = history::where('user_id', $plan->user_id)->where('type', 'Daily Profit')->whereDate('created_at', today())->first();
+            $history = history::where('user_id', $plan->user_id)->where('type', 'Daily Profit')->whereDate('created_at', Carbon::today())->first();
             if (!$history) {
                 $user = User::find($plan->user_id);
                 $user->balance += $reward;
                 $user->save();
-                history::create([
-                    'user_id' => $plan->user_id,
-                    'type' => 'Daily Profit',
-                    'amount' => $reward,
-                    'date' => now(),
-                ]);
+                $history = new history();
+                $history->user_id = $plan->user_id;
+                $history->amount = $reward;
+                $history->type = 'Daily Profit';
+                $history->save();
             }
         }
         return redirect()->route('Admin.Dashboard')->with('success', 'Reward given to all buyers');

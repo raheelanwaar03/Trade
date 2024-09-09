@@ -5447,6 +5447,11 @@ div#mCSB_1_container {
   background: #ff9110;
 }
 
+.dashboard-section .activites-content .column:nth-child(4) .single-item .icon-box {
+  background: #ff10d4;
+}
+
+
 .dashboard-section .activites-content .single-item span {
   position: relative;
   display: block;
@@ -5472,6 +5477,10 @@ div#mCSB_1_container {
 
 .dashboard-section .activites-content .column:nth-child(3) .single-item h2 {
   color: #ff9110;
+}
+
+.dashboard-section .activites-content .column:nth-child(4) .single-item h2 {
+  color: #ff10d4;
 }
 
 .dashboard-section .activites-content {

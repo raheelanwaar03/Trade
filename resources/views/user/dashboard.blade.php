@@ -6,29 +6,37 @@
             <div class="dashboard-content">
                 <div class="activites-content">
                     <div class="row clearfix">
-                        <div class="col-lg-4 col-md-6 col-sm-12 column">
-                            <a href="#" class="single-item">
+                        <div class="col-lg-3 col-md-6 col-sm-12 column">
+                            <div href="#" class="single-item">
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/wallet.png') }}" alt="">
                                 </div>
-                                <span>Wallet</span>
+                                <span style="color: #deff10">Wallet</span>
                                 <h2>{{ auth()->user()->balance }}</h2>
-                            </a>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 column">
-                            <a href="#" class="single-item">
+                        <div class="col-lg-3 col-md-6 col-sm-12 column">
+                            <div href="#" class="single-item">
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/deposit.png') }}"
                                         alt=""></div>
-                                <span>Deposit</span>
+                                <span style="color:#10d4ff">Deposit</span>
                                 <h2>{{ user_deposit() }}</h2>
-                            </a>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 column">
-                            <a href="#" class="single-item">
+                        <div class="col-lg-3 col-md-6 col-sm-12 column">
+                            <div class="single-item">
                                 <div class="icon-box"><img src="{{ asset('assets/images/icons/withdraw.png') }}"
                                         alt=""></div>
-                                <span>Withdraw</span>
+                                <span style="color: #ff9110">Withdraw</span>
                                 <h2>{{ user_withdraw() }}</h2>
-                            </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 column">
+                            <div class="single-item">
+                                <div class="icon-box"><img src="{{ asset('assets/images/icons/profit.png') }}"
+                                        alt=""></div>
+                                <span style="color: #ff10d4">Daily Profit</span>
+                                <h2 style="color: 54f40a;">{{ daily_profit() }}</h2>
+                            </div>
                         </div>
                     </div>
                 </div>

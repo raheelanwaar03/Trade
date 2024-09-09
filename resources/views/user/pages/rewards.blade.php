@@ -38,7 +38,6 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <h4 class="text-white">No Member</h4>
                                 @endforelse
                             </tbody>
                         </table>

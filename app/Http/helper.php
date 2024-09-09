@@ -2,7 +2,9 @@
 
 use App\Models\User;
 use App\Models\user\Deposit;
+use App\Models\user\history;
 use App\Models\user\Withdraw;
+use Carbon\Carbon;
 
 function users()
 {
@@ -28,12 +30,21 @@ function total_deposit()
 
 function user_withdraw()
 {
-    $withdraw = Withdraw::where('user_id', auth()->user()->id)->get()->sum('amount');
+    $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'approved')->get()->sum('amount');
     return $withdraw;
 }
 
 function user_deposit()
 {
-    $deposit = Deposit::where('user_id', auth()->user()->id)->get()->sum('amount');
+    $deposit = Deposit::where('user_id', auth()->user()->id)->where('status', 'approved')->get()->sum('amount');
     return $deposit;
+}
+
+// checking user daily profit
+
+function daily_profit()
+{
+    $rewards = history::where('user_id', auth()->user()->id)->where('type', 'Daily Profit')->whereDate('created_at', Carbon::today())->get();
+    $total_profit = $rewards->sum('amount');
+    return $total_profit;
 }

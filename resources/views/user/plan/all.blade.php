@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Trades Sphere - We welcome our investors with huge love</title>
+    <title>{{ env('APP_NAME') }} - We welcome our investors with huge love</title>
     <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -91,7 +91,7 @@
                     <li><a href="{{ route('User.Deposit') }}"><img
                                 src="{{ asset('assets/images/icons/icon-32.svg') }}" alt="">Deposit</a></li>
                     <li><a href="{{ route('User.Deposit.Report') }}"><img
-                                src="{{ asset('assets/images/icons/icon-40.svg') }}" alt="">Deposit Reqort</a>
+                                src="{{ asset('assets/images/icons/icon-40.svg') }}" alt="">Deposit Report</a>
                     </li>
                     <li><a href="{{ route('User.Plans') }}"><img src="{{ asset('assets/images/icons/icon-33.svg') }}"
                                 alt="">Buy Plans</a>

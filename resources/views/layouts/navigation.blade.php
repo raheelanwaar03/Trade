@@ -99,11 +99,11 @@
                                             </ul>
                                         </li>
                                     @else
-                                        <li class="dropdown"><a href="#">Auth</a>
-                                            <ul>
-                                                <li><a href="{{ route('login') }}">Sign In</a></li>
-                                                <li><a href="{{ route('register') }}">Sign Up</a></li>
-                                            </ul>
+                                        <li class="{{ request()->is('login') ? 'current' : '' }}"><a
+                                                href="{{ route('login') }}">Sign In</a>
+                                        </li>
+                                        <li class="{{ request()->is('register') ? 'current' : '' }}"><a
+                                                href="{{ route('register') }}">Sign Up</a>
                                         </li>
                                     @endif
                                 </ul>
